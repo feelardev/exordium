@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+html {
+    font-family: monospace;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(17, 17, 17);
+}
+
+body {
+    background: rgb(17, 17, 17);
+}
+
+#overlay-toggle {
+    position: absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: rgb(17, 17, 17);
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.no-hover {
+    display: block;
+}
+
+.disclaimer {
+    display: none;
+}
+
+.hover {
+    display: none;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    font-family: monospace !important;
+    background-color: rgb(17, 17, 17);
+    color: #fff !important
+}
+
+a {
+    text-decoration: none;
+    color: gray !important
+}
+
+a:hover {
+    transition: .4s !important;
+    color: #ff9dfa !important;
+    text-shadow: 0px 0px 3px #ff9dfa
+}
+
+.ascii {
+    color: rgb(199, 199, 199) !important;
+    top: 50%
+}
+
+span::before {
+    content: '\A';
+    white-space: pre
+}
+
+#center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%)
+}
+
+#overlay-toggle:checked~.overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+}
+
+#overlay-toggle:checked~.overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+}
+
+@media(hover: hover) {
+    .hover {
+        display: block;
+    }
+    .no-hover {
+        display: none;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #8f56e7, #e54a72, #d6b8f5, #ff9dfa, #ec87de);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 3s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.bar {
+    padding: 0;
+    margin: 0;
+    background: #1e5799;
+    background: -moz-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1e5799), color-stop(50%, #f300ff), color-stop(100%, #e0ff00));
+    background: -webkit-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    background: -o-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    background: -ms-linear-gradient(left, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    background: linear-gradient(to right, #1e5799 0%, #f300ff 50%, #e0ff00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#e0ff00', GradientType=1);
+    height: 5px;
+    border-bottom: 1px solid #000000;
+    animation: rainbow_animation 4s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+.info {
+    background-color: transparent;
+}
