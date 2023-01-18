@@ -16,17 +16,23 @@
     <link rel="shortcut icon" href="https://media.discordapp.net/attachments/957354800062808074/1065001191857197096/channels4_profile.jpg?width=676&height=676">
 </head>
 
-<body>
-   </script>
-    function audioPlay() {
+<body>  
+    <script>
+
+        function audioPlay() {
             var audio = document.getElementById("audio");
-            audio.volume = 0.3
+            audio.volume = 0.07
             audio.play()
         }
     </script>
-   <audio loop preload="auto" id="audio">
+    <audio loop preload="auto" id="audio">
 <source src="https://cdn.discordapp.com/attachments/1054705573356109888/1064944908235980930/Y2Mate.is_-_Raketak_2_feat._Steve_Sniff_NIKTIN-2K88UM2al4Y-160k-1654839205120-AudioTrimmer.com.mp3" type="audio/mp3">
 </audio>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <input type="checkbox" autocomplete="on" id="overlay-toggle">
+    <div class="overlay fullscreen">
+        <label for="overlay-toggle" autorun="audioPlay()">
+</label>
     </div>
     <div class="bar"></div>
     <div id="center">
